@@ -17,6 +17,12 @@ Repositorio Git vacío, sin commits, sin remote, sin aplicación ni dependencias
 
 Recomiendo Astro estático. Railway sirve el resultado; sin base de datos, Docker, CMS ni backend de RSVP. Versiones compatibles con el runtime se fijan tras comprobar engines; no se actualiza el Node global. El build de Railway usará la versión declarada por el proyecto.
 
+## Datos confirmados
+
+- Miguel Alejandro Álvarez Avendaño.
+- Lina Fernanda Lopez Mojica.
+- Presentación propuesta del hero: Miguel & Lina. Nombres completos en la invitación formal. Se conserva «Lopez» tal como fue escrito.
+
 ## Dirección visual: «La víspera»
 
 Una invitación fotográfica con la intimidad de una carta. Hero como díptico: nombres de gran escala sobre panel azul niebla y retrato protagonista; fecha alineada al borde de la fotografía. En móvil, fotografía vertical y tipografía adaptada al espacio seguro, sin cortar caras. Un ampersand de gran tamaño conecta los dos nombres: único gesto gráfico recurrente.
@@ -100,7 +106,7 @@ No confundir demo desplegada con invitación lista para enviar: nombres/fecha/lu
 
 ### NECESARIO
 
-- Nombres tal como deben publicarse.
+- Nombres recibidos y registrados; este dato ya está resuelto.
 - Fecha, hora, zona horaria y fin aproximado.
 - Ceremonia y recepción: nombre del lugar, dirección, horarios y Google Maps.
 - RSVP: URL de Tally o Google Forms con los cuatro campos; fecha límite y máximo general si aplica.
