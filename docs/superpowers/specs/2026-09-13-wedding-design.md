@@ -1,11 +1,13 @@
 # Invitación de boda — propuesta de diseño y arquitectura
 
-Estado: propuesta preparada para aprobación general; implementación no iniciada.
+Estado: diseño general aprobado por el cliente; ejecución autorizada.
 Fecha: 2026-09-13. Entrega objetivo: hoy, con despliegue Railway y comprobación real.
 
 ## Estado inicial
 
 Repositorio Git vacío, sin commits, sin remote, sin aplicación ni dependencias. Node 20.18.0 y npm 10.8.2 disponibles. Railway CLI instalado: `railway whoami` devuelve Unauthorized; `railway status` indica que no hay proyecto vinculado. No se ha creado infraestructura ni contratado servicios.
+
+Actualización: autenticación CLI confirmada con railway whoami. Hay un proyecto existente ajeno a la boda; el directorio continúa sin proyecto vinculado. Se creará un proyecto dedicado para la invitación al ejecutar el plan.
 
 ## Decisión propuesta
 
@@ -17,8 +19,15 @@ Repositorio Git vacío, sin commits, sin remote, sin aplicación ni dependencias
 
 Recomiendo Astro estático. Railway sirve el resultado; sin base de datos, Docker, CMS ni backend de RSVP. Versiones compatibles con el runtime se fijan tras comprobar engines; no se actualiza el Node global. El build de Railway usará la versión declarada por el proyecto.
 
+## Actualización aprobada
+
+Dress code: formal, pero no tan formal (elegante, sin etiqueta rigurosa). Regalos opcionales. Incluir revelación de sexo del bebé durante el evento. Usar dominio genérico Railway creado por CLI. Siete HEIC aportadas; utilizar exportaciones web sin modificar originales.
+
 ## Datos confirmados
 
+- Fecha confirmada por el cliente: 19 de septiembre de 2026, 7:00 p. m., zona America/Bogota (UTC-05:00).
+- Lugar: Club de Comercio, Salón Ciudad de Cúcuta. No se ha confirmado si corresponde a ceremonia, recepción o ambas.
+- Maps proporcionado: https://maps.app.goo.gl/SGfUkc2BEFvSSrhG9
 - Miguel Alejandro Álvarez Avendaño.
 - Lina Fernanda Lopez Mojica.
 - Presentación propuesta del hero: Miguel & Lina. Nombres completos en la invitación formal. Se conserva «Lopez» tal como fue escrito.
@@ -107,10 +116,10 @@ No confundir demo desplegada con invitación lista para enviar: nombres/fecha/lu
 ### NECESARIO
 
 - Nombres recibidos y registrados; este dato ya está resuelto.
-- Fecha, hora, zona horaria y fin aproximado.
-- Ceremonia y recepción: nombre del lugar, dirección, horarios y Google Maps.
+- Fecha, año y zona confirmados. Falta hora de finalización aproximada.
+- Lugar y Maps recibidos. Falta distinguir ceremonia y recepción si ocurren en lugares u horarios diferentes.
 - RSVP: URL de Tally o Google Forms con los cuatro campos; fecha límite y máximo general si aplica.
-- Iniciar sesión en Railway con `railway login`; indicar workspace si hay varios posibles. No pegar tokens en el chat.
+- Acceso Railway confirmado mediante CLI; autenticación resuelta.
 
 ### RECOMENDADO
 
@@ -128,4 +137,4 @@ No confundir demo desplegada con invitación lista para enviar: nombres/fecha/lu
 
 ## Revisión de la propuesta
 
-Sin infraestructura de invitados privados, cargas de fotos, panel de administración ni pagos. Los placeholders son contenido autorizado, no decisiones técnicas abiertas. La dependencia de autenticación/RSVP está identificada y no bloquea construir la versión local. Pendiente una aprobación general de esta propuesta antes del plan, conforme a brainstorming solicitado.
+Sin infraestructura de invitados privados, cargas de fotos, panel de administración ni pagos. Los placeholders son contenido autorizado, no decisiones técnicas abiertas. La dependencia de autenticación/RSVP está identificada y no bloquea construir la versión local. Aprobación general recibida. RSVP Tally aprobado como enfoque; aún no hay URL concreta.
