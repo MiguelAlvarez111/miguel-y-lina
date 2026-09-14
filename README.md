@@ -35,13 +35,13 @@ Personalización: añadir `?guest=Familia%20Álvarez` al enlace. Solo cambia el 
 
 Las fotografías servidas están en `public/photos`, WebP en anchos 480, 960 y 1600. Cada `id` en la configuración corresponde a `id-480.webp`, `id-960.webp`, `id-1600.webp`. Mantener las tres variantes y un texto alternativo correcto. Fuentes retocadas: `src/assets/photos`. `scripts/prepare-photos.mjs` convierte las siete imágenes JPG numeradas originales; no sustituye los derivados retocados.
 
-Se integraron cinco retoques OpenAI (hero, 0546, 6802, 6803, 6804); 6806 y 6810 conservan la foto original optimizada. Los HEIC originales no se modificaron ni se subieron al repositorio. La herramienta de imágenes no expone selección del modelo denominado 2.5.
+La selección actual usa el hero retocado, el nuevo retrato formal restaurado con OpenAI, paisaje, carrera y celebración reales, y dos recuerdos anteriores en una galería de cuatro fotos. Se conservan los derivados anteriores en el repositorio. El video fue excluido por petición expresa. Los HEIC originales no se modificaron ni se subieron al repositorio. La herramienta de imágenes no expone selección del modelo denominado 2.5.
 
 `public/og.jpg` es la tarjeta para compartir, 1200×630. Si se cambian nombres, fecha o lugar, hay que actualizar también esta imagen. Los metadatos OG están listos; la caché y presentación final de WhatsApp dependen de esa aplicación.
 
 ## RSVP
 
-Tally abre en una pestaña propia desde los botones de confirmación. Nombre y asistencia obligatorios, cantidad desplegable 1–10 requerida únicamente al asistir, mensaje opcional. Se evita incrustar el formulario para mantener una apertura fiable y sin espacio vacío mientras carga un tercero. Cambiar proveedor con PUBLIC_RSVP_URL; se permiten Tally y Google Forms.
+Tally abre en una pestaña propia desde el botón de la sección RSVP y directamente desde el botón fijo móvil. Nombre y asistencia obligatorios, cantidad desplegable 1–10 requerida únicamente al asistir, mensaje opcional. Se evita incrustar el formulario para mantener una apertura fiable y sin espacio vacío mientras carga un tercero. Cambiar proveedor con PUBLIC_RSVP_URL; se permiten Tally y Google Forms.
 
 En Submissions puedes ver respuestas y descargar CSV. Hay dos registros técnicos, llamados `PRUEBA FINAL — NO CONTAR` y `PRUEBA TÉCNICA — NO CONTAR COMO INVITADO`; excluirlos del recuento. El segundo pertenece a una versión anterior del campo numérico y contiene 1.5, defecto corregido con el desplegable. La prueba final recibió 1 asistente sin mensaje.
 

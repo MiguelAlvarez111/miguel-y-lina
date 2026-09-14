@@ -1,5 +1,6 @@
 ---
 import Arrow from '../components/Arrow.astro';
+import {providerUrl} from '../lib/event';
 import {wedding as w} from '../config/wedding';
 import '@fontsource/bodoni-moda/latin-400.css';
 import '@fontsource/bodoni-moda/latin-400-italic.css';
@@ -24,7 +25,7 @@ const canonical = new URL('/',w.seo.siteUrl).href;
  <header class="site-header"><a class="monogram" href="#inicio" aria-label={w.nav.home}>{w.couple.monogram}</a><nav aria-label="Navegación principal"><a href="#historia">{w.nav.story}</a><a href="#celebracion">{w.nav.event}</a><a class="nav-rsvp" href="#confirmar">{w.nav.rsvp}<span aria-hidden="true"><Arrow direction="up-right"/></span></a></nav></header>
  <main><slot/></main>
  <footer><a class="monogram" href="#inicio">{w.couple.monogram}</a><span>{w.date.label} · {w.venue.city}</span><a href="#inicio">{w.ui.backTop} <Arrow direction="up"/></a></footer>
- <a class="mobile-rsvp" href="#confirmar">{w.nav.rsvp}<span aria-hidden="true"><Arrow direction="up-right"/></span></a>
+ <a class="mobile-rsvp" href={providerUrl(w.rsvp.url) || '#confirmar'} target="_blank" rel="noopener noreferrer">{w.nav.rsvp}<span aria-hidden="true"><Arrow direction="up-right"/></span></a>
  <script>import '../scripts/invitation';</script>
 </body>
 </html>

@@ -14,3 +14,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero-photo img{transform:none}.reveal{opacity:1!important;transform:none!important}}
 
 .arrow-icon{display:inline-block;vertical-align:middle;flex-shrink:0}.text-link .arrow-icon,.calendar-links .arrow-icon,footer .arrow-icon{width:16px;height:16px;margin-left:6px}.lightbox .arrow-icon{width:26px;height:26px}
+
+/* Four selected memories, in balanced pairs. */
+.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1000px;margin-inline:auto}.gallery-photo:nth-child(3n+2){margin-top:0}.gallery-photo:nth-child(even){margin-top:48px}.gallery-photo:nth-child(3n+3) img{aspect-ratio:3/4}
+@media(max-width:700px){.gallery-photo:nth-child(even){margin-top:24px}.section-space{padding-top:62px;padding-bottom:62px}.story{padding-top:0}.gifts{padding-top:0}.closing-photo img{object-position:50% 60%!important}}
