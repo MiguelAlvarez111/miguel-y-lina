@@ -1,0 +1,5 @@
+---
+import {wedding as w} from '../config/wedding';
+import Photo from './Photo.astro';
+---
+<section class="closing"><div class="closing-photo reveal"><Photo photo={w.closing.photo}/></div><div class="closing-text"><p class="eyebrow reveal">{w.closing.eyebrow}</p><h2 class="reveal">{w.closing.title}<br/><em>{w.closing.emphasis}</em></h2><p class="reveal">{w.closing.body}</p><p class="closing-names reveal">{w.couple.first} <em>&</em> {w.couple.second}</p></div></section>

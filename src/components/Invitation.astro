@@ -1,0 +1,14 @@
+---
+import {wedding as w,calendarEvent} from '../config/wedding';
+import {calendarUrl} from '../lib/event';
+---
+<section id="invitacion" class="invitation section-space">
+ <p class="eyebrow reveal">{w.invitation.eyebrow}</p><h2 class="reveal">{w.invitation.title}</h2>
+ <p class="guest-line reveal" data-guest data-suffix={w.invitation.personalSuffix}>{w.invitation.greeting}</p>
+ <p class="body-copy reveal">{w.invitation.body}</p><p class="signature reveal">{w.invitation.signature}<br/><span>{w.couple.fullFirst}</span><span class="signature-amp">&</span><span>{w.couple.fullSecond}</span></p>
+ <div class="countdown-section reveal" data-countdown data-date={w.date.start} data-today={w.countdown.today} data-past={w.countdown.past} data-invalid={w.countdown.invalid}>
+ <p class="eyebrow">{w.countdown.eyebrow}</p><p class="countdown-heading" data-countdown-status>{w.countdown.title}</p>
+ <div class="countdown" aria-label="Tiempo hasta nuestra boda">{w.countdown.labels.map((label,i)=><div><span data-unit={['days','hours','minutes','seconds'][i]}>—</span><small>{label}</small></div>)}</div>
+ </div>
+ <div class="calendar-links"><a href={calendarUrl(calendarEvent)} target="_blank" rel="noopener noreferrer">{w.schedule.calendarGoogle} ↗</a><span aria-hidden="true">/</span><a href="/boda.ics" download="boda.ics">{w.schedule.calendarApple}</a></div>
+</section>

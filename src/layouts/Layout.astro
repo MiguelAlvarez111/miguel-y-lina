@@ -1,0 +1,29 @@
+---
+import {wedding as w} from '../config/wedding';
+import '@fontsource/bodoni-moda/latin-400.css';
+import '@fontsource/bodoni-moda/latin-400-italic.css';
+import '@fontsource/instrument-sans/latin-400.css';
+import '@fontsource/instrument-sans/latin-500.css';
+import '../styles/global.css';
+const canonical = new URL('/',w.seo.siteUrl).href;
+---
+<!doctype html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+ <title>{w.seo.title}</title><meta name="description" content={w.seo.description}/><link rel="canonical" href={canonical}/>
+ <meta name="robots" content={w.seo.noindex?'noindex, nofollow':'index, follow'}/><meta name="theme-color" content="#E6ECEE"/>
+ <meta property="og:title" content={w.seo.title}/><meta property="og:description" content={w.seo.description}/><meta property="og:type" content="website"/><meta property="og:locale" content="es_CO"/><meta property="og:url" content={canonical}/>
+ <meta property="og:image" content={new URL(w.seo.image,canonical).href}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={`${w.couple.first} y ${w.couple.second}, nuestra boda`}/>
+ <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={w.seo.title}/><meta name="twitter:description" content={w.seo.description}/><meta name="twitter:image" content={new URL(w.seo.image,canonical).href}/>
+ <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+ <a class="skip-link" href="#invitacion">{w.nav.skip}</a>
+ <header class="site-header"><a class="monogram" href="#inicio" aria-label={w.nav.home}>{w.couple.monogram}</a><nav aria-label="Navegación principal"><a href="#historia">{w.nav.story}</a><a href="#celebracion">{w.nav.event}</a><a class="nav-rsvp" href="#confirmar">{w.nav.rsvp}<span aria-hidden="true">↗</span></a></nav></header>
+ <main><slot/></main>
+ <footer><a class="monogram" href="#inicio">{w.couple.monogram}</a><span>{w.date.label} · {w.venue.city}</span><a href="#inicio">{w.ui.backTop} ↑</a></footer>
+ <a class="mobile-rsvp" href="#confirmar">{w.nav.rsvp}<span aria-hidden="true">↗</span></a>
+ <script>import '../scripts/invitation';</script>
+</body>
+</html>
