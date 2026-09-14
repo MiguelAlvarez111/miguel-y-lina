@@ -4,6 +4,6 @@ import Photo from './Photo.astro';
 ---
 <section id="historia" class="story section-space">
  <div class="story-main reveal"><Photo photo={w.story.photos[0]}/><p class="caption">{w.story.caption}</p></div>
- <div class="story-text"><p class="eyebrow reveal">{w.story.eyebrow}</p><h2 class="reveal">{w.story.title}<br/><em>{w.story.emphasis}</em></h2><p class="body-copy reveal">{w.story.body}</p><p class="body-copy reveal">{w.story.second}</p><div class="story-small reveal"><Photo photo={w.story.photos[1]} sizes="(max-width:700px) 58vw, 22vw"/></div></div>
+ <div class="story-text"><p class="eyebrow reveal">{w.story.eyebrow}</p><h2 class="reveal">{w.story.title}<br/><em>{w.story.emphasis}</em></h2><p class="body-copy reveal">{w.story.body}</p><p class="body-copy reveal">{w.story.second}</p><div class="story-small reveal"><Photo photo={w.story.photos[1]} sizes="(max-width:700px) 72vw, 22vw"/></div></div>
 </section>
 <section class="revelation section-space" aria-labelledby="reveal-title"><span class="reveal-amp" aria-hidden="true">&</span><div class="revelation-content"><p class="eyebrow reveal">{w.reveal.eyebrow}</p><h2 class="reveal" id="reveal-title">{w.reveal.title}<br/><em>{w.reveal.emphasis}</em></h2><p class="body-copy reveal">{w.reveal.body}</p><p class="reveal reveal-closing">{w.reveal.closing}</p></div></section>

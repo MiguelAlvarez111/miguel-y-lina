@@ -1,9 +1,10 @@
 ---
+import Arrow from './Arrow.astro';
 import {wedding as w} from '../config/wedding';
 import Photo from './Photo.astro';
 ---
 <section id="inicio" class="hero" aria-labelledby="couple-name">
  <div class="hero-type"><p class="eyebrow hero-enter">{w.hero.eyebrow}</p><h1 id="couple-name" class="hero-enter"><span>{w.couple.first}</span><em>&</em><span>{w.couple.second}</span></h1><p class="hero-line hero-enter">{w.hero.line}</p><div class="hero-date hero-enter"><span>{w.date.day}</span><span>{w.date.month}<br/>{w.date.year}</span></div></div>
  <div class="hero-photo"><Photo photo={w.hero.photo} hero sizes="(max-width: 700px) 100vw, 52vw"/><span class="photo-note">{w.date.weekday} · {w.date.time}</span></div>
- <a class="scroll-cue" href="#invitacion"><span>{w.hero.scroll}</span><span aria-hidden="true">↓</span></a>
+ <a class="scroll-cue" href="#invitacion"><span>{w.hero.scroll}</span><span aria-hidden="true"><Arrow direction="down"/></span></a>
 </section>

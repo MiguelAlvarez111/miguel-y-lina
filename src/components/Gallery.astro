@@ -1,8 +1,9 @@
 ---
+import Arrow from './Arrow.astro';
 import {wedding as w} from '../config/wedding';
 import Photo from './Photo.astro';
 ---
 <section class="gallery section-space" aria-labelledby="gallery-title"><div class="gallery-heading reveal"><div><p class="eyebrow">{w.gallery.eyebrow}</p><h2 id="gallery-title">{w.gallery.title}</h2></div><p>{w.gallery.hint}</p></div>
- <div class="gallery-grid">{w.gallery.photos.map((photo,i)=><button class="gallery-photo reveal" type="button" data-gallery data-index={i} data-src={`/photos/${photo.id}-1600.webp`} data-alt={photo.alt} aria-label={`${w.ui.zoom} ${i+1}`}><Photo photo={photo} sizes="(max-width:700px) 46vw, 30vw"/><span class="zoom-indicator" aria-hidden="true">↗</span></button>)}</div>
- <dialog class="lightbox" aria-label={w.ui.galleryLabel}><button class="lightbox-close" data-close aria-label={w.ui.close}>×</button><button class="lightbox-prev" data-prev aria-label={w.ui.previous}>←</button><figure><img data-lightbox-image alt="" width="1350" height="1800"/><figcaption data-lightbox-caption></figcaption></figure><button class="lightbox-next" data-next aria-label={w.ui.next}>→</button><span class="lightbox-count" data-photo-count></span></dialog>
+ <div class="gallery-grid">{w.gallery.photos.map((photo,i)=><button class="gallery-photo reveal" type="button" data-gallery data-index={i} data-src={`/photos/${photo.id}-1600.webp`} data-alt={photo.alt} aria-label={`${w.ui.zoom} ${i+1}`}><Photo photo={photo} sizes="(max-width:700px) 46vw, 30vw"/><span class="zoom-indicator" aria-hidden="true"><Arrow direction="up-right"/></span></button>)}</div>
+ <dialog class="lightbox" aria-label={w.ui.galleryLabel}><button class="lightbox-close" data-close aria-label={w.ui.close}>×</button><button class="lightbox-prev" data-prev aria-label={w.ui.previous}><Arrow direction="left"/></button><figure><img data-lightbox-image alt="" width="1350" height="1800"/><figcaption data-lightbox-caption></figcaption></figure><button class="lightbox-next" data-next aria-label={w.ui.next}><Arrow direction="right"/></button><span class="lightbox-count" data-photo-count></span></dialog>
 </section>

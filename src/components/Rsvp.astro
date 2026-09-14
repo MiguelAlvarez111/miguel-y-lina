@@ -1,10 +1,11 @@
 ---
+import Arrow from './Arrow.astro';
 import {wedding as w} from '../config/wedding';
 import {providerUrl} from '../lib/event';
 const url=providerUrl(w.rsvp.url);
 if(w.rsvp.url && !url) throw new Error('PUBLIC_RSVP_URL debe ser una URL válida de Tally o Google Forms.');
 ---
 <section id="confirmar" class="rsvp section-space"><div class="rsvp-intro reveal"><p class="eyebrow">{w.rsvp.eyebrow}</p><h2>{w.rsvp.title}</h2><p class="body-copy">{w.rsvp.body}</p><span class="rsvp-amp" aria-hidden="true">&</span></div>
- <div class="rsvp-content reveal">{url ? <><a class="button" href={url} target="_blank" rel="noopener noreferrer">{w.rsvp.button} ↗</a></> : <div class="rsvp-pending"><span class="eyebrow">{w.schedule.calendarTitle}</span><p>{w.rsvp.pending}</p><span>{w.rsvp.pendingDetail}</span><a class="text-link" href="/boda.ics" download="boda.ics">{w.schedule.calendarTitle} ↗</a></div>}</div>
+ <div class="rsvp-content reveal">{url ? <><a class="button" href={url} target="_blank" rel="noopener noreferrer">{w.rsvp.button} <Arrow direction="up-right"/></a></> : <div class="rsvp-pending"><span class="eyebrow">{w.schedule.calendarTitle}</span><p>{w.rsvp.pending}</p><span>{w.rsvp.pendingDetail}</span><a class="text-link" href="/boda.ics" download="boda.ics">{w.schedule.calendarTitle} <Arrow direction="up-right"/></a></div>}</div>
 </section>
 <section class="gifts section-space reveal"><p class="eyebrow">{w.gifts.eyebrow}</p><h2>{w.gifts.title}</h2><p class="body-copy">{w.gifts.body}</p></section>

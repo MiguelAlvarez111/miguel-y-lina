@@ -1,4 +1,5 @@
 ---
+import Arrow from './Arrow.astro';
 import {wedding as w,calendarEvent} from '../config/wedding';
 import {calendarUrl} from '../lib/event';
 ---
@@ -10,5 +11,5 @@ import {calendarUrl} from '../lib/event';
  <p class="eyebrow">{w.countdown.eyebrow}</p><p class="countdown-heading" data-countdown-status>{w.countdown.title}</p>
  <div class="countdown" aria-label="Tiempo hasta nuestra boda">{w.countdown.labels.map((label,i)=><div><span data-unit={['days','hours','minutes','seconds'][i]}>—</span><small>{label}</small></div>)}</div>
  </div>
- <div class="calendar-links"><a href={calendarUrl(calendarEvent)} target="_blank" rel="noopener noreferrer">{w.schedule.calendarGoogle} ↗</a><span aria-hidden="true">/</span><a href="/boda.ics" download="boda.ics">{w.schedule.calendarApple}</a></div>
+ <div class="calendar-links"><a href={calendarUrl(calendarEvent)} target="_blank" rel="noopener noreferrer">{w.schedule.calendarGoogle} <Arrow direction="up-right"/></a><span aria-hidden="true">/</span><a href="/boda.ics" download="boda.ics">{w.schedule.calendarApple}</a></div>
 </section>

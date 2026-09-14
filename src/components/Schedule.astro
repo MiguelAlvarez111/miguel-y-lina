@@ -1,8 +1,9 @@
 ---
+import Arrow from './Arrow.astro';
 import {wedding as w} from '../config/wedding';
 ---
 <section id="celebracion" class="schedule section-space"><div class="section-heading reveal"><p class="eyebrow">{w.schedule.eyebrow}</p><h2>{w.schedule.title}</h2></div>
- <div class="event-sheet reveal"><div class="event-date"><span class="eyebrow">{w.date.weekday}</span><strong>{w.date.day}</strong><span class="date-month">{w.date.month}</span><span>{w.date.year}</span></div><div class="event-location"><p class="eyebrow">{w.venue.city}</p><h3>{w.venue.name}</h3><p class="venue-room">{w.venue.room}</p><a class="button button-outline" href={w.venue.maps} target="_blank" rel="noopener noreferrer">{w.schedule.mapLabel}<span aria-hidden="true">↗</span></a></div></div>
+ <div class="event-sheet reveal"><div class="event-date"><span class="eyebrow">{w.date.weekday}</span><strong>{w.date.day}</strong><span class="date-month">{w.date.month}</span><span>{w.date.year}</span></div><div class="event-location"><p class="eyebrow">{w.venue.city}</p><h3>{w.venue.name}</h3><p class="venue-room">{w.venue.room}</p><a class="button button-outline" href={w.venue.maps} target="_blank" rel="noopener noreferrer">{w.schedule.mapLabel}<span aria-hidden="true"><Arrow direction="up-right"/></span></a></div></div>
  <div class="event-sequence"><article class="reveal"><p class="eyebrow">{w.date.time}</p><h3>{w.schedule.ceremony}</h3><p>{w.schedule.ceremonyNote}</p></article><span class="sequence-amp" aria-hidden="true">&</span><article class="reveal"><p class="eyebrow">{w.schedule.receptionTime}</p><h3>{w.schedule.reception}</h3><p>{w.schedule.receptionNote}</p></article></div>
  <div class="dress-code reveal"><p class="eyebrow">{w.dressCode.eyebrow}</p><h3>{w.dressCode.title}</h3><p>{w.dressCode.body}</p><em>{w.dressCode.note}</em></div>
 </section>
